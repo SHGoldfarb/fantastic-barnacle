@@ -55,16 +55,22 @@ master/output/producto74/paso_a_paso.csv"
     cases = pd.read_csv(active_cases_file_path)
     phases = pd.read_csv(phases_file_path)
 
-    print(cases)
-    print(phases)
+    return (cases, phases)
 
 
+def process_and_merge(cases, phases):
+    # counties = {}
+
+    pass
 
 
 def main():
-    # Fetch data
-    data = get_data()
-    # Calculate
+    # Fetch
+    cases, phases = get_data()
+
+    # Process
+    data = process_and_merge(cases, phases)
+
     # Plot
     print(data)
 
